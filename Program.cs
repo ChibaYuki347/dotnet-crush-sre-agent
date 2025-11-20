@@ -3,7 +3,17 @@ using Microsoft.AspNetCore.Http;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add Application Insights telemetry
+builder.Services.AddApplicationInsightsTelemetry();
+
+// Add health checks
+builder.Services.AddHealthChecks();
+
 var app = builder.Build();
+
+// Health check endpoint for Azure App Service
+app.MapHealthChecks("/healthz");
 
 app.MapGet("/", async context =>
 {
