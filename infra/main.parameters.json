@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "webAppName": {
+      "value": "my-sre-appjapaneast"
+    },
+    "location": {
+      "value": "japaneast"
+    },
+    "appServicePlanName": {
+      "value": "my-app-service-plan"
+    },
+    "sku": {
+      "value": "B1"
+    },
+    "slotName": {
+      "value": "staging"
+    },
+    "alertEmail": {
+      "value": "admin@chiba-yuki.com"
+    }
+  }
+}
